@@ -1,0 +1,130 @@
+:root {
+    /*
+        #0B0C10
+        #1F2833
+        #C5C6C7
+        #66FCF1
+        #45A29E
+    */
+    --terminal-background-color: #1f28338d;
+    --terminal-shadow-color: #0b0c105d;
+    --terminal-input-line-color: #C5C6C7;
+    --terminal-cursor-color: #C5C6C7;
+    --terminal-selection-color: #C5C6C7;
+    --output-cmd-color: #C5C6C7;
+    --output-cmd-res-color: #66FCF1;
+}
+
+body {
+    background-image: url("./background-blue.png");
+    animation: scroll-background 100s linear infinite;
+}
+
+@keyframes scroll-background{
+    from {
+        background-position-y: 0px;
+    }
+    to {
+        background-position-y: 256px;
+    }
+}
+
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+
+@media only screen and (max-width: 1600px) {
+    .main {
+        width: 1200px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .main {
+        width: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .main {
+        width: 800px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        width: 600px;
+    }
+}
+
+.terminal {
+    font-family: 'Inconsolata', monospace;
+    font-size: 22px;
+
+    word-break: break-all;
+    line-break: anywhere;
+
+    background-color: var(--terminal-background-color);
+    border-radius: 5px;
+    padding: 10px;
+
+    /*-webkit-box-shadow: 5px 5px 0px 0px var(--terminal-shadow-color);
+    -moz-box-shadow: 5px 5px 0px 0px var(--terminal-shadow-color);
+    box-shadow: 5px 5px 0px 0px var(--terminal-shadow-color);*/
+    -webkit-box-shadow: 2px 2px 0px 5px var(--terminal-shadow-color);
+    -moz-box-shadow: 2px 2px 0px 5px var(--terminal-shadow-color);
+    box-shadow: 2px 2px 0px 5px var(--terminal-shadow-color);
+}
+
+.terminal-line {
+    color: var(--terminal-input-line-color);
+}
+
+.terminal-line div {
+    display:inline;
+}
+
+.terminal ::selection {
+    background-color: var(--terminal-selection-color);
+}
+
+#terminal-cursor {
+    border-bottom: 4px solid var(--terminal-cursor-color);
+    display: inline-block;
+    line-height: 15px;
+}
+
+.blink {
+    animation: blink 1s step-start 0s infinite;
+}
+
+th, td {
+    padding:0 15px 0 15px;
+}
+
+a {
+    color: inherit;
+}
+
+asciiArt {
+    white-space: pre;
+}
+
+outputCmd {
+    color: var(--output-cmd-color);
+}
+
+outputCmdRes {
+    color: var(--output-cmd-res-color);
+    display: block;
+    word-break: break-word !important;
+    line-break: normal !important;
+}
+
+@keyframes blink {
+    50% {
+        border-bottom: 0px;
+    }
+}
