@@ -26,10 +26,10 @@ app.use("/", router);
 let httpServer = http.createServer(app);
 let httpsServer = https.createServer(httpsOptions, app);
 
-httpServer.listen(8080, () => {
+httpServer.listen(80, () => {
     console.log("HTTP listening");
 });
 
-httpsServer.listen(8443, () => {
+httpsServer.listen(443, () => {
     console.log("HTTPS listening");
 });
