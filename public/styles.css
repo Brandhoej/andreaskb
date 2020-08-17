@@ -15,7 +15,14 @@
     --output-cmd-res-color: #66FCF1;
 }
 
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
 body {
+    height: 100%;
+    overflow: auto;
     background-image: url("./background-blue.png");
     animation: scroll-background 100s linear infinite;
 }
