@@ -15,14 +15,14 @@ async function startAnimation() {
         setCmd(cmd);
         await enterKey();
     }
-    await exeCmd("help");
-    await exeCmd("ls");
     await exeCmd("cat welcome.html");
     await exeCmd("cat about.html");
     await exeCmd("cat projects.html");
     await exeCmd("cat enterprise.html");
-    await exeCmd("cat end.html");
     await exeCmd("cat contact.html");
+    await exeCmd("cat end.html");
+    await exeCmd("help");
+    await exeCmd("ls");
 }
 
 document.addEventListener("paste", async (event) => {
