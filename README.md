@@ -1,2 +1,2 @@
-# andreaskb.me
+# andreaskb
  Personal website.
